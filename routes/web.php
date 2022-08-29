@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    event(new \App\Events\playground());
     return view('welcome');
 });
