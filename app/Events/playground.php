@@ -14,14 +14,16 @@ class playground implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    public $message;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct()
+
+    public function __construct($message="Welcum")
     {
-        //
+        $this->message = $message;
     }
 
     /**
@@ -31,6 +33,15 @@ class playground implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('public.playground.1');
+        return new PresenceChannel('public.playground.1');
+        return ['my-channel'];
+    }
+    public function broadcastAs()
+    {
+        return 'Playground';
+    }
+    public function broadcastWith()
+    {
+        return ['fuck' => 'Playground', 'message'=>$this->message];
     }
 }

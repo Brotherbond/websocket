@@ -14,6 +14,6 @@
 */
 
 Route::get('/', function () {
-    event(new \App\Events\playground());
+    event(new \App\Events\playground("suck"));
     return view('welcome');
 });
