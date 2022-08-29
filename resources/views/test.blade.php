@@ -37,12 +37,14 @@
             </div>
         </div>
     </body>
+  
     @vite('resources/js/app.js')
 
     <script>
-        Echo.channel('trades')
-            .listen('NewTrade', (e) => {
+        Echo.channel('my-channel')
+            .listen('my-event', (e) => {
                 console.log(e.trade);
+                alert('fuck');
                 document.getElementById('latest_trade_user').innerText = e.trade;
             })
     </script>

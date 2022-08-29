@@ -17,3 +17,12 @@ Route::get('/', function () {
     event(new \App\Events\playground("suck"));
     return view('welcome');
 });
+
+Route::get('/use', function () {
+    event(new \App\Events\playground("cum"));
+    return view('user');
+});
+Route::get('/test', function () {
+    event(new \App\Events\playground("cum"));
+    return view('test');
+});
