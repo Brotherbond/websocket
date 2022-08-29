@@ -40,10 +40,10 @@
     @vite('resources/js/app.js')
 
     <script>
-        Echo.channel('trades')
-            .listen('NewTrade', (e) => {
-                console.log(e.trade);
-                document.getElementById('latest_trade_user').innerText = e.trade;
-            })
+        // Echo.channel('trades')
+        //     .listen('NewTrade', (e) => {
+        //         console.log(e.trade);
+        //         document.getElementById('latest_trade_user').innerText = e.trade;
+        //     })
     </script>
 </html>

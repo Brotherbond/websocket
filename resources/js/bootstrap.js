@@ -31,5 +31,11 @@ window.Echo = new Echo({
     wssPort: import.meta.env.VITE_PUSHER_PORT ?? 443,
     forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',
     enabledTransports: ['ws', 'wss'],
-    disableStats: true,
 });
+
+window.Echo.channel('trades')
+.listen('NewTrade', (e) => {
+    console.log(e.trade);
+    alert('fuck')
+    document.getElementById('latest_trade_user').innerText = e.trade;
+})
