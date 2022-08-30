@@ -2,7 +2,8 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "socket": "php artisan websocket:serve --port=6003"
     },
     "devDependencies": {
         "axios": "^0.27",
