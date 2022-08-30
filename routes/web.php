@@ -19,6 +19,15 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
+    event(new \App\Events\NewTrade("cum"));
+    return response()->json(['message'=> 'Successful'],200);
+});
+Route::post('/test', function () {
+    event(new \App\Events\NewTrade("cum"));
+    return response()->json([],200);
+});
+
+Route::get('/testing', function () {
     // event(new \App\Events\playground("cum"));
     return view('test');
 });
