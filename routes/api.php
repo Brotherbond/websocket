@@ -30,7 +30,7 @@ Route::post('/messageWebhook', function (Request $request) {
 
 Route::post('/messageWebhook1', function (Request $request) { //making external request NB won't work making request to itself
     $url = 'http://127.0.0.1:8000/api/ade';
-    $response = Http::post($url);
-    event(new \App\Events\NewTrade($response['message']));
-    return response()->json(['message' => $request->all(), 'test' => $response['message']], 200);
+    $response = Http::post($url)->json();
+    event(new \App\Events\NewTrade($response));
+    return response()->json(['message' => $request->all(), 'test' => $response], 200);
 });
