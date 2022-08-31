@@ -23,10 +23,11 @@
                                     <div class="rounded p-3 bg-yellow-600"><i class="fas fa-user-plus fa-2x fa-fw fa-inverse"></i></div>
                                 </div>
                                 <div class="flex-1 text-right md:text-center">
-                                    <h5 class="font-bold uppercase text-gray-500">Latest trade</h5>
+                                    <h5 class="font-bold uppercase text-gray-500">Latest Message</h5>
+                                    <br>
                                     <h3 class="font-bold text-3xl">
                                         <p>
-                                            Name: <span id="latest_trade_user"></span>
+                                            Message: <span id="latest_trade_user"></span>
                                         </p>
                                     </h3>
                                 </div>
