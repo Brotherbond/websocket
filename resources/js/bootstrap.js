@@ -36,6 +36,6 @@ window.Echo = new Echo({
 window.Echo.channel('trades')
 .listen('NewTrade', (e) => {
     console.log(e.trade);
-    alert('fuck')
+    alert('new Message')
     document.getElementById('latest_trade_user').innerText = e.trade;
 })
