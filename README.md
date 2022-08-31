@@ -1,3 +1,5 @@
-# websocket
+# Publisher & Subscriber System
 
-testing laravel websockets and laravel echo using pusher.
+### Publisher  => https://github.com/Brotherbond/maxibuy.co
+
+### Subscriber =>  https://github.com/Brotherbond/websocket
